@@ -31,5 +31,15 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Cormorant Garamond\:300`,
+          `Quicksand\:300,600`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
   ],
 }
