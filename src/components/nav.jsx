@@ -42,7 +42,7 @@ const Nav = ({ isOpen, onOpen, onClose }) => {
             "bg-primary": isDark,
             "bg-transparent": !isDark,
           },
-          "lg:hidden fixed top-0 left-0 w-screen px-8 py-6 z-50 transition duration-300"
+          "lg:hidden fixed top-0 left-0 w-screen px-8 py-5 z-50 transition duration-300"
         )}
       >
         <Burger
@@ -82,7 +82,7 @@ const Nav = ({ isOpen, onOpen, onClose }) => {
               animateScroll.scrollToTop({ duration: 400 })
               onClose()
             }}
-            className="w-1/3 mx-0 ml-auto text-secondary fill-current"
+            className="w-1/3 pb-12 mx-0 ml-auto text-secondary fill-current"
           />
         </nav>
       )}

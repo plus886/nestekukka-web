@@ -11,14 +11,14 @@ const IndexPage = ({ heroRef }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="min-h-screen flex">
+      <div className="h-screen flex">
         <Image
           ref={heroRef}
           fileName="hero2.jpg"
           className="absolute min-h-screen w-full"
           imgStyle={{
             objectFit: "cover",
-            objectPosition: "70% 0",
+            objectPosition: "70% 20%",
           }}
         />
         <div className="font-display text-white text-xl absolute h-full max-w-lg inset-y-0 left-0 mr-6 md:mr-auto md:ml-16 lg:mr-auto lg:ml-64 flex flex-col justify-center tracking-wider text-right">
@@ -26,14 +26,7 @@ const IndexPage = ({ heroRef }) => {
           <p>into a swirl of dilapidation and regeneration</p>
         </div>
       </div>
-      <div className="py-16 md:py-24">
-        {/* <h1 className="font-display text-lg text-primary">
-          a fluid flower floats away
-        </h1>
-        <h1 className="font-display text-lg text-primary">
-          into a swirl of dilapidation and regeneration
-        </h1> */}
-      </div>
+      <div className="py-16 md:py-24"></div>
       <About />
       <div className="py-8 md:py-24" />
       <Shop />
