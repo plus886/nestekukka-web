@@ -14,7 +14,7 @@ const About = () => (
           className="lg:mr-10 lg:ml-auto lg:min-h-500 lg:object-cover"
         />
       </div>
-      <div className="px-4 lg:px-0 lg:col-span-3">
+      <div className="px-8 lg:px-0 lg:col-span-3">
         <h1 className="text-xxs font-semibold tracking-extreme mt-10">ABOUT</h1>
         <h2 className="font-display text-3xl">NESTEKUKKA.</h2>
         <Separator className="my-8" />

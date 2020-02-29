@@ -15,14 +15,18 @@ const IndexPage = ({ heroRef }) => {
         <Image
           ref={heroRef}
           fileName="hero2.jpg"
-          className="object-cover absolute min-h-screen w-full"
+          className="absolute min-h-screen w-full"
+          imgStyle={{
+            objectFit: "cover",
+            objectPosition: "70% 0",
+          }}
         />
-        <div className="font-display text-white text-xl absolute h-full max-w-lg inset-y-0 left-0 mr-6 lg:mr-auto lg:ml-64 flex flex-col justify-center tracking-wider text-right">
+        <div className="font-display text-white text-xl absolute h-full max-w-lg inset-y-0 left-0 mr-6 md:mr-auto md:ml-16 lg:mr-auto lg:ml-64 flex flex-col justify-center tracking-wider text-right">
           <p className="pt-40">a fluid flower floats away</p>
           <p>into a swirl of dilapidation and regeneration</p>
         </div>
       </div>
-      <div className="py-24">
+      <div className="py-16 md:py-24">
         {/* <h1 className="font-display text-lg text-primary">
           a fluid flower floats away
         </h1>
@@ -31,11 +35,11 @@ const IndexPage = ({ heroRef }) => {
         </h1> */}
       </div>
       <About />
-      <div className="py-24" />
+      <div className="py-8 md:py-24" />
       <Shop />
-      <div className="py-24" />
+      <div className="py-8 md:py-24" />
       <Contact />
-      <div className="h-40" />
+      <div className="h-16 md:h-40" />
     </Layout>
   )
 }

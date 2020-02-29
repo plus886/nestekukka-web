@@ -12,7 +12,11 @@ const Image = ({ fileName, ...rest }) => {
             relativePath
             name
             childImageSharp {
-              fluid(quality: 90, maxWidth: 3180) {
+              fluid(
+                quality: 90
+                maxWidth: 3180
+                srcSetBreakpoints: [1200, 1600]
+              ) {
                 ...GatsbyImageSharpFluid
               }
             }

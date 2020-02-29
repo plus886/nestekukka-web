@@ -36,9 +36,18 @@ const Nav = ({ isOpen, onOpen, onClose }) => {
   }, [])
   return (
     <>
-      <header className="lg:hidden fixed top-0 left-0 w-screen p-8 z-50">
+      <header
+        className={cx(
+          {
+            "bg-primary": isDark,
+            "bg-transparent": !isDark,
+          },
+          "lg:hidden fixed top-0 left-0 w-screen px-8 py-6 z-50 transition duration-300"
+        )}
+      >
         <Burger
           className="fill-current text-beige"
+          style={{ fontSize: "8px" }}
           onClick={() => {
             if (isOpen) {
               onClose()
@@ -50,10 +59,31 @@ const Nav = ({ isOpen, onOpen, onClose }) => {
         />
       </header>
       {isOpen && (
-        <nav className="lg:hidden fixed top-0 left-0 z-40 h-screen w-screen bg-primary text-beige">
-          <ul>
-            <li>ABOUT</li>
+        <nav className="lg:hidden flex flex-col fixed top-0 left-0 px-16 py-24 z-40 h-screen w-screen bg-primary text-beige font-display text-2xl">
+          <ul className="flex-grow">
+            <li className="py-2 cursor-pointer">
+              <Link to="about" onClick={onClose}>
+                ABOUT
+              </Link>
+            </li>
+            <li className="py-2 cursor-pointer">
+              <Link to="shop" onClick={onClose}>
+                SHOP
+              </Link>
+            </li>
+            <li className="py-2 cursor-pointer">
+              <Link to="contact" onClick={onClose}>
+                CONTACT
+              </Link>
+            </li>
           </ul>
+          <LogoSvg
+            onClick={() => {
+              animateScroll.scrollToTop({ duration: 400 })
+              onClose()
+            }}
+            className="w-1/3 mx-0 ml-auto text-secondary fill-current"
+          />
         </nav>
       )}
       <nav className="hidden lg:block fixed z-10 py-16 px-20 w-64">

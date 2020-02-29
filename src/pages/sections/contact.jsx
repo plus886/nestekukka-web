@@ -14,7 +14,7 @@ const Contact = () => (
           className="lg:object-cover lg:mr-10 lg:ml-auto lg:-mt-32 lg:min-h-300"
         />
       </div>
-      <div className="lg:col-span-4 px-4 lg:px-0">
+      <div className="lg:col-span-4 px-8 lg:px-0">
         <h1 className="text-xxs font-semibold tracking-extreme mt-10">
           CONTACT
         </h1>
