@@ -18,6 +18,10 @@ module.exports = {
         secondary: "#ba735d",
         beige: "#d9cec6",
       },
+      minHeight: {
+        "300": "300px",
+        "500": "500px",
+      },
     },
   },
   variants: {},

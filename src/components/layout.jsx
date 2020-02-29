@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -22,10 +22,22 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  const [isOpenMenu, setIsOpenMenu] = useState(false)
+  useEffect(() => {
+    if (isOpenMenu) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+  }, [isOpenMenu])
 
   return (
     <>
-      <Nav />
+      <Nav
+        isOpen={isOpenMenu}
+        onOpen={() => setIsOpenMenu(true)}
+        onClose={() => setIsOpenMenu(false)}
+      />
       <div className="bg-beige">
         <main>{children}</main>
       </div>

@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* for Burger Icon */
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before {
+  background-color: theme(colors.secondary);
+}

@@ -1,33 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { Element } from "react-scroll"
+import Separator from "../../components/separator"
 import Image from "../../components/fluidImage"
 
 const About = () => (
-  <div className="grid grid-cols-7 px-16">
-    <div className="col-span-1"></div>
-    <div className="col-span-3">
-      <Image
-        fileName="catch-1.jpg"
-        className="object-cover mr-10 ml-auto"
-        style={{ minHeight: 500 }}
-      />
+  <>
+    <Element name="about" />
+    <div className="grid grid-cols-1 lg:grid-cols-7 lg:px-16">
+      <div className="lg:col-span-1"></div>
+      <div className="lg:col-span-3">
+        <Image
+          fileName="catch-1.jpg"
+          className="lg:mr-10 lg:ml-auto lg:min-h-500 lg:object-cover"
+        />
+      </div>
+      <div className="px-4 lg:px-0 lg:col-span-3">
+        <h1 className="text-xxs font-semibold tracking-extreme mt-10">ABOUT</h1>
+        <h2 className="font-display text-3xl">NESTEKUKKA.</h2>
+        <Separator className="my-8" />
+        <p className="text-sm mt-12">
+          NESTEKUKKA means "fluid flower" in Finnish.
+        </p>
+      </div>
     </div>
-    <div className="col-span-3">
-      <h1 className="text-xxs font-semibold tracking-extreme mt-10">ABOUT</h1>
-      <h2 className="font-display text-3xl">NESTEKUKKA.</h2>
-      <p className="text-sm mt-12">
-        With the launch of our magazine's second edition, we celebrate the dawn
-        of Spring, and together we embark on new journeys of the body and mind.
-        And so, in this issue, we visit a small, family-run knitwear factory
-        near Lake Como that makes some of our most luxurious and coveted pieces
-        of the season. And, we check-in to the intimate and charming Hotel
-        Heritage in Brugge, the famous Cal-A-Vie spa in southern California, and
-        one of the world's most remote lodges, The Tikchik Lodge in Bristol Bay,
-        Alaska.
-      </p>
-    </div>
-  </div>
+  </>
 )
 
 export default About
